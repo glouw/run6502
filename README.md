@@ -4,6 +4,13 @@ This is a fork of https://github.com/gianlucag/mos6502 that packages
 assembling and running a single 6502 .asm file with PC wake up address
 0x0300. The wake up address can be modified within run.sh.
 
+## Libraries
+
+First install the acme assembler:
+
+    mac: brew install acme
+    arch: pacman -S acme
+
 ## Usage
 
     ./run.sh code.asm
