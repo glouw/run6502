@@ -1402,6 +1402,20 @@ struct mos6502
                     printf("%02X ", Read(i + w * j));
                 printf("\n");
             }
+            puts("STACK");
+            for(int j = 0; j < w; j++)
+            {
+                for(int i = 0; i < w; i++)
+                    printf("%02X ", Read(0x1FF - i + w * j));
+                printf("\n");
+            }
+            printf("A  : %3d\n", A);
+            printf("X  : %3d\n", X);
+            printf("Y  : %3d\n", Y);
+            printf("SP : 0x%02X\n", sp);
+            printf("S  : 0x%02X\n", status);
+            printf("PC : 0x%04X\n", pc);
+
             exit(1);
         }
         pc = ((hi << 8) | lo) + 1;
